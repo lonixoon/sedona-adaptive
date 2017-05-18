@@ -88,8 +88,7 @@ figure {
   margin: 1em 40px;
 }
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   height: 0;
 }
 pre {
@@ -139,8 +138,7 @@ input {
 }
 input[type="checkbox"],
 input[type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0;
 }
 input[type="number"]::-webkit-inner-spin-button,
@@ -149,8 +147,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 input[type="search"] {
   -webkit-appearance: textfield;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
 }
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
@@ -180,8 +177,7 @@ th {
   padding: 0;
 }
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 html {
   font-size: 10px;
@@ -226,6 +222,22 @@ hr {
 [role="button"] {
   cursor: pointer;
 }
+.container {
+  box-sizing: content-box;
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
 .main-nav {
   position: relative;
   min-height: 51px;
@@ -249,6 +261,7 @@ hr {
   line-height: 1.4;
   color: #ffffff;
   text-transform: uppercase;
+  text-decoration: none;
 }
 .main-nav__item a[href]:hover {
   background: #64a1c8;
@@ -289,16 +302,14 @@ hr {
   .main-nav__toggle {
     position: absolute;
     right: 0;
-    top: 1px;
+    top: 0;
     width: 70px;
-    height: 48px;
+    height: 50px;
     font-size: 0;
     border: none;
     cursor: pointer;
-    background: #82b3d3;
-  }
-  .main-nav__toggle:hover {
-    background: #5195c2;
+    background: #5597c3;
+    outline: none;
   }
   .main-nav__toggle:active::before,
   .main-nav__toggle:active::after {
@@ -312,9 +323,7 @@ hr {
     width: 36px;
     height: 2px;
     background: #fff;
-    -webkit-box-shadow: 0 8px 0 0 #fff,
-                    0 16px 0 0 #fff;
-            box-shadow: 0 8px 0 0 #fff,
+    box-shadow: 0 8px 0 0 #fff,
                     0 16px 0 0 #fff;
   }
   .main-nav--closed .main-nav__item,
