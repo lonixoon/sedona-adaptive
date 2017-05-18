@@ -21,10 +21,9 @@
     </nav>
     <div class="page-header__logo">
       <picture>
-        <source srcset="img/logo1.svg" media="(min-width: 1200px)">
-        <!-- <source srcset="img/logo.svg" media="(min-width: 768px) and (max-width: 1999px)"> -->
-        <source srcset="img/logo1.svg" media="(max-width: 767px)">
-        <img src="img/logo1.svg" alt="Седона">
+        <source srcset="img/logo-desktop.svg" media="(min-width: 1200px)">
+        <source srcset="img/logo.svg" media="(max-width: 1999px)">
+        <img src="img/logo.svg" alt="Седона">
       </picture>
     </div>
   </header>
@@ -38,8 +37,13 @@
           <span class="advantages__subtitle">Настоящий городок</span>
           <span class="advantages__number">№1</span>
           <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+          <picture>
+            <source srcset="img/index-hotel-desktop.jpg" media="(min-width: 1200px)">
+            <source srcset="img/index-hotel-tabled.jpg" media="(min-width: 768px) and (max-width: 1999px)">
+            <source srcset="img/index-hotel-mobile.jpg" media="(max-width: 767px)">
+            <img src="index-hotel-mobile.jpg" alt="Мотель">
+          </picture>
         </li>
-        <img src="#" alt="Мотель">
         <ul class="advantages__nested-list">
           <li class="advantages__item">
             <span class="advantages__subtitle">Жилье</span>
@@ -59,7 +63,12 @@
           <span class="advantages__subtitle">Там есть Мост Дьявола</span>
           <span class="advantages__number">№2</span>
           <p class="advantages__description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-          <img src="#" alt="Мост Дьявола">
+          <picture>
+            <source srcset="img/index-brige-desktop.jpg" media="(min-width: 1200px)">
+            <source srcset="img/index-brige-tabled.jpg" media="(min-width: 768px) and (max-width: 1999px)">
+            <source srcset="img/index-brige-mobile.jpg" media="(max-width: 767px)">
+            <img src="index-brige-mobile.jpg" alt="Мост Дьявола">
+          </picture>
         </li>
 
         <li class="advantages__item">
@@ -83,13 +92,28 @@
 
       </ul>
     </section>
-
     <section class="map">
       <h2 class="map__title">Заинтересовались?</h2>
       <p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостинец в Седоне</p>
       <a class="btn" href="form.html">Найти гостиницу</a>
-      <img class="map__img" src="#" alt="Карта">
+      <picture>
+        <source srcset="img/index-map-desktop.jpg" media="(min-width: 1200px)">
+        <source srcset="img/index-map-tabled.jpg" media="(min-width: 768px) and (max-width: 1999px)">
+        <source srcset="img/index-map-mobile.jpg" media="(max-width: 767px)">
+        <img src="img/index-map-mobile.jpg" alt="Карта">
+      </picture>
     </section>
   </main>
+  <footer class="page-footer">
+    <p class="page-footer__hashtag">#visitsedona</p>
+    <p class="page-footer__social  social">
+      <a class="social__link  social__link--tw" href="#">Twitter</a>
+      <a class="social__link  social__link--fb" href="#">Faceboock</a>
+      <a class="social__link  social__link--yt" href="#">YouTube</a>
+    </p>
+    <p class="page-footer__copyright">Разработано htmlacademy</p>
+  </footer>
+  <script src="js/popup.js"></script>
 </body>
+</html>
 </html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Седона</title>
+</head>
+<body>
+  <header class="page-header">
+    <nav class="main-nav  main-nav--closed">
+      <button type="button" class="main-nav__toggle">Открыть меню</button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__items">
+          <li class="main-nav__item"><a href="index.html">Главная</a></li>
+          <li class="main-nav__item"><a href="photos.html">Фото и видео</a></li>
+          <li class="main-nav__item  main-nav--active"><a>Форма отзыва</a></li>
+          <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="page-header__logo">
+      <picture>
+        <source srcset="img/logo-desktop.svg" media="(min-width: 1200px)">
+        <source srcset="img/logo.svg" media="(max-width: 1999px)">
+        <img src="img/logo.svg" alt="Седона">
+      </picture>
+    </div>
+  </header>
+  <main>
+    <section class="form">
+      <h1 class="form__title">Оставьте свой отзыв</h1>
+      <p class="form__intro">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных Вами достопримечательностях.</p>
+      <form name="feadback" method="post">
+        <fieldset>
+          <legend>Представьтесь пожалуйста:</legend>
+            <label>Имя:<input type="text" name="name" placeholder="Петр"></label>
+            <label>Фамилия:<input type="text" name="surname" placeholder="Иванов"></label>
+            <label>Очество:<input type="text" name="patronymic" placeholder="Александрович"></label>
+        </fieldset>
+        <fieldset>
+          <legend>Контактная информация:</legend>
+          <label>Контактный телефон<input type="tel" name="tel" placeholder="Введите телефон"></label>
+          <label>Электронная почта<input type="email" name="email" placeholder="Введите e-mail"></label>
+        </fieldset>
+        <fieldset>
+          <legend>Ваше общее впечатление:</legend>
+          <label><input type="radio" name="impression">Скорее положительное</label>
+          <label><input type="radio" name="impression">Скорее отрицательное</label>
+          <label><input type="radio" name="impression">Затрудняюсь ответить</label>
+        </fieldset>
+        <fieldset>
+          <legend>Посещённые достопримечательности:</legend>
+          <label><input type="checkbox" name="brige">Мост Дьявола</label>
+          <label><input type="checkbox" name="park">Слайд-парк</label>
+          <label><input type="checkbox" name="slide">Горка-Колокол</label>
+          <label><input type="checkbox" name="cliffs">Красные скалы</label>
+        </fieldset>
+        <fieldset>
+          <legend>Опишите свои эмоции:</legend>
+          <textarea placeholder="Опишите подробно все свои восторги"></textarea>
+        </fieldset>
+        <button class="btn" type="submit">Отправить отзыв</button>
+      </form>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <p class="page-footer__hashtag">#visitsedona</p>
+    <p class="page-footer__social  social">
+      <a class="social__link  social__link--tw" href="#">Twitter</a>
+      <a class="social__link  social__link--fb" href="#">Faceboock</a>
+      <a class="social__link  social__link--yt" href="#">YouTube</a>
+    </p>
+    <p class="page-footer__copyright">Разработано htmlacademy</p>
+  </footer>
+  <script src="js/popup.js"></script>
+</body>
+</html>
