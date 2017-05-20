@@ -11,7 +11,6 @@
   &__items {
     padding: 0;
     margin: 0;
-    // font-weight: 700;
     list-style: none;
     box-shadow: inset 0 -6px 10px -8px;
   }
@@ -31,6 +30,11 @@
 
       &[href]:hover {
         background: @blue-dark;
+      }
+
+      &[href]:active {
+        background: @blue-darker;
+        color: @blue-base;
       }
     }
   }
@@ -75,11 +79,11 @@
 @media @mobile-width {
   .main-nav {
     
-    &__item {
-      a {
-        padding-left: 21px;
-      }
-    }
+    // &__item {
+    //   a {
+    //     padding-left: 21px;
+    //   }
+    // }
 
 
     &__toggle {

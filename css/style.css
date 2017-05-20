@@ -246,6 +246,44 @@ h3 {
   margin: 0 auto;
   padding: 0 20px;
 }
+.btn {
+  display: inline-block;
+  padding: 14px 20px;
+  border: 1px solid #e5ddd5;
+  font-family: inherit;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  background-color: #FFF;
+  cursor: pointer;
+}
+.btn:hover {
+  border-color: #eeeeee;
+}
+.btn--width-100 {
+  width: 100%;
+}
+.btn--gray {
+  color: #ffffff;
+  border-color: #3e3e3e;
+}
+.btn--gray:hover {
+  border-color: #585858;
+}
+.btn--blue {
+  color: #FFF;
+  background-color: #82b3d3;
+  border: none;
+}
+.btn--blue:hover {
+  background-color: #64a1c8;
+}
+.btn--blue:active {
+  background-color: #5597c3;
+  color: #82b3d3;
+}
 .page-header {
   position: relative;
 }
@@ -254,11 +292,14 @@ h3 {
   content: "";
   bottom: 0px;
   width: 100%;
-  height: 30px;
+  height: 20px;
   background: url(../img/corner-white.svg);
 }
 .page-header__wrapper {
-  background: url(../img/bg-tabled.jpg) no-repeat 50% 0px;
+  background: url(../img/bg.jpg) no-repeat 50% 0px;
+}
+.page-header__wrapper--inner-page {
+  background-position: 50% 70%;
 }
 .page-header__logo {
   text-align: center;
@@ -295,6 +336,10 @@ h3 {
 .main-nav__item a[href]:hover {
   background: #64a1c8;
 }
+.main-nav__item a[href]:active {
+  background: #5597c3;
+  color: #82b3d3;
+}
 .main-nav__user-items {
   padding: 0;
   margin: 0;
@@ -325,9 +370,6 @@ h3 {
   background: url(../img/login.png) no-repeat;
 }
 @media (max-width: 767px) {
-  .main-nav__item a {
-    padding-left: 21px;
-  }
   .main-nav__toggle {
     position: absolute;
     right: 0;
@@ -501,7 +543,7 @@ h3 {
   bottom: -60px;
   left: 0;
   width: 100%;
-  height: 30px;
+  height: 20px;
   background: url(../img/corner-blue.svg);
 }
 .advantages__list {
@@ -509,6 +551,13 @@ h3 {
   list-style: none;
 }
 .advantages__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 40px 0;
   padding-left: 20px;
   padding-right: 20px;
@@ -520,22 +569,127 @@ h3 {
 .advantages__item--bg-gray {
   background-color: #eeeeee;
 }
+.advantages__item--line-bottom {
+  position: relative;
+}
+.advantages__item--line-bottom ::after {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  content: "";
+  width: 90%;
+  height: 1px;
+  background-color: #b3b3b3;
+}
+.advantages__item--inner {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 .advantages__item--house,
 .advantages__item--food,
 .advantages__item--souvenirs {
-  padding-left: 60px;
+  padding-left: 70px;
   background: url(../img/icon-advantages.svg) no-repeat;
+  background-size: 40px;
+}
+.advantages__item--house {
+  background-position: 15px -170px;
+}
+.advantages__item--food {
+  background-position: 15px -500px;
+}
+.advantages__item--souvenirs {
+  background-position: 15px 10px;
+}
+.advantages__item--bg-brige {
+  padding-bottom: 300px;
+  background: #82b3d3 url(../img/index-brige.jpg) no-repeat 50% 100%;
+}
+.advantages__item--bg-motel {
+  padding-bottom: 300px;
+  background: #82b3d3 url(../img/index-hotel.jpg) no-repeat 50% 100%;
 }
 .advantages__description {
   margin-bottom: 0;
 }
 .advantages__nested-list {
-  padding: 0;
+  padding: 20px 0;
   list-style: none;
   text-align: left;
 }
 .advantages__subtitle {
   font-size: 18px;
   font-weight: 700;
+}
+.hotels {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+}
+.page-footer {
+  text-align: center;
+}
+.page-footer__hashtag {
+  font-size: 20px;
+  font-weight: 700;
+}
+.page-footer__link {
+  display: inline-block;
+  font-size: 0;
+  width: 45px;
+  height: 45px;
+  background: #82b3d3 url(../img/social.svg) no-repeat;
+  margin-right: 10px;
+}
+.page-footer__link:hover {
+  background-color: #5597c3;
+}
+.page-footer__link:active {
+  background-image: url(../img/social-active.svg);
+}
+.page-footer__link--tw {
+  background-position: 9px 9px;
+}
+.page-footer__link--fb {
+  background-position: -98px 10px;
+}
+.page-footer__link--inst {
+  background-position: -215px 10px;
+  margin-right: 0;
+}
+.page-footer__link--htmlac {
+  background: #ffffff url(../img/logo-html.svg) no-repeat;
+  background-size: 135px;
+  margin-left: 15px;
+  margin-right: 0;
+}
+.page-footer__link--htmlac:hover {
+  background-color: #FFF;
+}
+.page-footer__copyright {
+  padding: 30px 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  line-height: 3;
+  color: #000000;
+}
+.page-footer__copyright:hover {
+  color: #000;
+  text-decoration: none;
+}
+.page-footer__copyright:hover .page-footer__link--htmlac {
+  background-image: url(../img/logo-html-hover.svg);
+}
+.page-footer__copyright:active .page-footer__link--htmlac {
+  background-image: url(../img/logo-html-active.svg);
 }
 /*# sourceMappingURL=style.css.map */

@@ -39,7 +39,7 @@
         <p class="advantages__intro">Рассмотрим 5 причин, по которым Седона круче Гранд Каньон!</p>
         <ul class="advantages__list">
 
-          <li class="advantages__item  advantages__item--bg-blue  advantages__item--corner">
+          <li class="advantages__item  advantages__item--bg-blue  advantages__item--corner  advantages__item--bg-motel">
             <span class="advantages__subtitle">Настоящий городок</span>
             <span class="advantages__number">№1</span>
             <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
@@ -52,24 +52,24 @@
             </div> -->
           </li>
           <ul class="advantages__nested-list">            
-              <li class="advantages__item  advantages__item--house">
+              <li class="advantages__item  advantages__item--inner  advantages__item--house">
                 <span class="advantages__subtitle">Жилье</span>
                 <p class="advantages__description">Рекомендуем пожить в настоящим мотеле все как в кино!</p>
               </li>
               
-              <li class="advantages__item  advantages__item--food">
+              <li class="advantages__item  advantages__item--inner  advantages__item--food">
                 <span class="advantages__subtitle">Сувениры</span>
                 <p class="advantages__description">Не только китайского, но и местного производства!</p>
               </li>
               
-              <li class="advantages__item  advantages__item--souvenirs">
+              <li class="advantages__item  advantages__item--inner  advantages__item--souvenirs">
                 <span class="advantages__subtitle">Еда</span>
                 <p class="advantages__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>          
             </ul>
           
 
-          <li class="advantages__item  advantages__item--bg-blue">
+          <li class="advantages__item  advantages__item--bg-blue  advantages__item--bg-brige">
             <span class="advantages__subtitle">Там есть Мост Дьявола</span>
             <span class="advantages__number">№2</span>
             <p class="advantages__description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
@@ -80,13 +80,13 @@
             </picture> -->
           </li>
 
-          <li class="advantages__item  advantages__item--bg-gray">
+          <li class="advantages__item  advantages__item--bg-gray  advantages__item--line-bottom ">
             <span class="advantages__subtitle">Небольшая площадь</span>
             <span class="advantages__number">№3</span>
             <p class="advantages__description">Все достопримечательности находятся очень близко</p>
           </li>
 
-          <li class="advantages__item  advantages__item--bg-gray">
+          <li class="advantages__item  advantages__item--bg-gray  advantages__item--line-bottom">
             <span class="advantages__subtitle">Красивая дорога</span>
             <span class="advantages__number">№4</span>
             <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
@@ -96,33 +96,30 @@
             <span class="advantages__subtitle">Мало туристов</span>
             <span class="advantages__number">№5</span>
             <p class="advantages__description">Большинство едет в Гранд Каньон и толпится там</p>
-
           </li>
-
         </ul>
       </div>
     </section>
-    <section class="map">
-      <h2 class="map__title">Заинтересовались?</h2>
+    <section class="hotels">
+      <h2 class="hotels__title">Заинтересовались?</h2>
       <p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостинец в Седоне</p>
-      <a class="btn" href="form.html">Найти гостиницу</a>
-      <picture>
-        <source srcset="img/index-map-desktop.jpg" media="(min-width: 1200px)">
-        <source srcset="img/index-map-tabled.jpg" media="(min-width: 768px) and (max-width: 1999px)">
-        <img src="img/index-map-mobile.jpg" alt="Карта">
-      </picture>
+      <button class="btn  btn--blue" href="form.html">Найти гостиницу</button>      
     </section>
   </main>
   <footer class="page-footer">
+    <picture>
+      <source srcset="img/index-map-desktop.jpg" media="(min-width: 1200px)">
+      <source srcset="img/index-map-tabled.jpg" media="(min-width: 768px) and (max-width: 1999px)">
+      <img src="img/index-map-mobile.jpg" alt="Карта">
+    </picture>
     <p class="page-footer__hashtag">#visitsedona</p>
-    <p class="page-footer__social  social">
-      <a class="social__link  social__link--tw" href="#">Twitter</a>
-      <a class="social__link  social__link--fb" href="#">Faceboock</a>
-      <a class="social__link  social__link--yt" href="#">YouTube</a>
+    <p class="page-footer__social">
+      <a class="page-footer__link  page-footer__link--tw" href="#">twitter</a>
+      <a class="page-footer__link  page-footer__link--fb" href="#">faceboock</a>
+      <a class="page-footer__link  page-footer__link--inst" href="#">intagram</a>
     </p>
-    <p class="page-footer__copyright">Разработано htmlacademy</p>
+    <a href="#" class="page-footer__copyright">Разработано<span class="page-footer__link  page-footer__link--htmlac">htmlacademy</span></a>
   </footer>
   <script src="js/popup.js"></script>
 </body>
-</html>
 </html>

@@ -18,7 +18,7 @@
       bottom: -60px;
       left: 0;
       width: 100%;
-      height: 30px;
+      height: 20px;
       background: url(../img/corner-blue.svg);
     }
   }
@@ -31,6 +31,8 @@
 
 
   &__item { 
+    display: flex;
+    flex-direction: column;
     padding: 40px 0;
     .padding();
 
@@ -38,25 +40,57 @@
       color: #FFF;
       background-color: @blue-base;
     }
-
     &--bg-gray {
       background-color: @gray-lighter;
     }
 
-    &--house, &--food, &--souvenirs {
-      padding-left: 60px;
-      background: url(../img/icon-advantages.svg) no-repeat;
+
+    &--line-bottom {
+      position: relative;
+      & ::after {
+        position: absolute;
+        bottom: 0;
+        left: 5%;
+        content: "";
+        width: 90%;
+        height: 1px;
+        background-color: @gray-light;
+      }
     }
 
 
-    // &--corner {
-    //   position: relative;
+    &--inner {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
 
-    //   ::before {
 
-    //   }
-    // }
+    &--house, &--food, &--souvenirs {
+      padding-left: 70px;
+      background: url(../img/icon-advantages.svg) no-repeat;
+      background-size: 40px;
+    }
+    &--house {
+      background-position: 15px -170px;
+    }
+    &--food {
+      background-position: 15px -500px;
+    }
+    &--souvenirs {
+      background-position: 15px 10px;
+    }
+
+
+    &--bg-brige {
+      padding-bottom: 300px;
+      background: @blue-base url(../img/index-brige.jpg) no-repeat 50% 100%;
+    }
+    &--bg-motel {
+      padding-bottom: 300px;
+      background: @blue-base url(../img/index-hotel.jpg) no-repeat 50% 100%;
+    }
   }
+
 
   &__description {
     margin-bottom: 0;
@@ -64,13 +98,13 @@
 
 
   &__nested-list {
-    padding: 0;
+    padding: 20px 0;
     list-style: none;
     text-align: left;
   }
 
 
-  &__subtitle {
+  &__subtitle {    
     font-size: 18px;
     font-weight: 700;
   }
