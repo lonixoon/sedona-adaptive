@@ -23,7 +23,6 @@
       <div class="page-header__logo">
         <picture>
           <source srcset="img/logo-desktop.svg" media="(min-width: 1200px)">
-          <!-- <source srcset="img/logo.svg" media="(max-width: 1999px)"> -->
           <img src="img/logo.svg" alt="Седона">
         </picture>
         <div class="page-header__title">
@@ -32,40 +31,58 @@
       </div>
     </div>
   </header>
-  <main class="container">
+  <main class="page">
     <section class="form">
       <h1 class="form__title">Оставьте свой отзыв</h1>
-      <p class="form__intro">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных Вами достопримечательностях.</p>
+      <p class="form__intro">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных Вами местах.</p>
       <form name="feadback" method="post">
-        <fieldset>
-          <legend>Представьтесь пожалуйста:</legend>
-            <label>Имя:<input type="text" name="name" placeholder="Петр"></label>
-            <label>Фамилия:<input type="text" name="surname" placeholder="Иванов"></label>
-            <label>Очество:<input type="text" name="patronymic" placeholder="Александрович"></label>
+        <fieldset class="form__item">
+          <span class="form__subtitle">Представьтесь пожалуйста:</span>
+          <label class="form__label">Имя:<input class="form__inpute  form__inpute--text" type="text" name="name" placeholder="Петр"></label>
+          <label class="form__label">Фамилия:<input class="form__inpute"  type="text" name="surname" placeholder="Иванов"></label>
+          <label class="form__label">Очество:<input class="form__inpute" type="text" name="patronymic" placeholder="Александрович"></label>
         </fieldset>
-        <fieldset>
-          <legend>Контактная информация:</legend>
-          <label>Контактный телефон<input type="tel" name="tel" placeholder="Введите телефон"></label>
-          <label>Электронная почта<input type="email" name="email" placeholder="Введите e-mail"></label>
+        
+        <fieldset class="form__item">
+          <span class="form__subtitle">Контактная информация:</span>
+          <label class="form__label  form__label--column">Контактный телефон:<input class="form__inpute  form__inpute--column" type="tel" name="tel" placeholder="Введите телефон"></label>
+          <label class="form__label  form__label--column">Электронная почта:<input class="form__inpute  form__inpute--column" type="email" name="email" placeholder="Введите e-mail"></label>
         </fieldset>
-        <fieldset>
-          <legend>Ваше общее впечатление:</legend>
-          <label><input type="radio" name="impression">Скорее положительное</label>
-          <label><input type="radio" name="impression">Скорее отрицательное</label>
-          <label><input type="radio" name="impression">Затрудняюсь ответить</label>
+        
+        <fieldset class="form__item">
+          <span class="form__subtitle">Ваше общее впечатление:</span>
+          <input type="radio" name="impression" id="radio1" checked>
+          <label class="form__radio-btn  radio-btn" for="radio1">Скорее положительное</label>
+
+          <input type="radio" name="impression" id="radio2">
+          <label class="form__radio-btn  radio-btn" for="radio2">Скорее отрицательное</label>
+
+          <input type="radio" name="impression" id="radio3">
+          <label class="form__radio-btn  radio-btn" for="radio3">Затрудняюсь ответить</label>
         </fieldset>
-        <fieldset>
-          <legend>Посещённые достопримечательности:</legend>
-          <label><input type="checkbox" name="brige">Мост Дьявола</label>
-          <label><input type="checkbox" name="park">Слайд-парк</label>
-          <label><input type="checkbox" name="slide">Горка-Колокол</label>
-          <label><input type="checkbox" name="cliffs">Красные скалы</label>
+        
+        <fieldset class="form__item">
+          <span class="form__subtitle">Посещенные места:</span>
+          <input type="checkbox" name="brige" id="brige" checked>
+          <label class="form__checkbox checkbox" for="brige">Мост Дьявола</label>
+
+          <input type="checkbox" name="park" id="park" checked>
+          <label class="form__checkbox checkbox" for="park">Слайд-парк</label>
+
+          <input type="checkbox" name="slide" id="slide">
+          <label class="form__checkbox checkbox" for="slide">Горка-Колокол</label>
+
+          <input type="checkbox" name="cliffs" id="cliffs">
+          <label class="form__checkbox checkbox" for="cliffs">Красные скалы</label>
         </fieldset>
-        <fieldset>
-          <legend>Опишите свои эмоции:</legend>
-          <textarea placeholder="Опишите подробно все свои восторги"></textarea>
+        
+        <fieldset class="form__item">
+          <span class="form__subtitle">Опишите свои эмоции:</span>
+          <textarea class="form__inpute  form__inpute--column" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
-        <button class="btn" type="submit">Отправить отзыв</button>
+        <div class="form__btn">
+          <button class="btn  btn--blue  btn--width-100" type="submit">Отправить отзыв</button>
+        </div>
       </form>
     </section>
   </main>

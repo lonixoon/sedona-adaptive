@@ -224,6 +224,7 @@ hr {
 }
 body {
   font-size: 14px;
+  line-height: 1.7;
   text-transform: uppercase;
 }
 h1,
@@ -242,6 +243,9 @@ h3 {
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+.page__title {
+  margin: 30px 0;
 }
 .btn {
   display: inline-block;
@@ -280,6 +284,42 @@ h3 {
 .btn--blue:active {
   background-color: #5597c3;
   color: #82b3d3;
+}
+.checkbox {
+  position: relative;
+  cursor: pointer;
+}
+.checkbox::before {
+  text-align: center;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  border-radius: 5px;
+  background-color: #eeeeee;
+}
+input[type="checkbox"]:checked + .checkbox::before {
+  content: "\2713";
+}
+.radio-btn {
+  position: relative;
+  cursor: pointer;
+}
+.radio-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #eeeeee;
+}
+input[type="radio"]:checked + .radio-btn::before {
+  box-shadow: inset 0 0 0 15px #eeeeee, inset 0 0 0 30px #000000;
 }
 .page-header {
   position: relative;
@@ -421,12 +461,10 @@ h3 {
     background: #fff;
   }
   .main-nav--opened .main-nav__toggle::before {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    transform: rotate(45deg);
   }
   .main-nav--opened .main-nav__toggle::after {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    transform: rotate(-45deg);
   }
   .main-nav--opened .main-nav__wrapper {
     text-align: center;
@@ -437,24 +475,16 @@ h3 {
     background: #000000;
   }
   .main-nav__wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     background: #000000;
   }
   .main-nav__items {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    flex-grow: 1;
     font-weight: 400;
   }
   .main-nav__item {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    flex-grow: 1;
     text-align: center;
   }
   .main-nav__item a {
@@ -547,13 +577,8 @@ h3 {
   list-style: none;
 }
 .advantages__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 40px 0;
   padding-left: 20px;
   padding-right: 20px;
@@ -575,7 +600,7 @@ h3 {
   content: "";
   width: 90%;
   height: 1px;
-  background-color: #b3b3b3;
+  background-color: #cccccc;
 }
 .advantages__item--inner {
   padding-top: 15px;
@@ -619,13 +644,8 @@ h3 {
 }
 .hotels {
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 40px;
@@ -663,7 +683,7 @@ h3 {
 }
 .page-footer__link--htmlac {
   background: #ffffff url(../img/logo-html.svg) no-repeat;
-  background-size: 135px;
+  height: 55px;
   margin-left: 15px;
   margin-right: 0;
 }
@@ -672,10 +692,8 @@ h3 {
 }
 .page-footer__copyright {
   padding: 30px 0;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  line-height: 3;
+  line-height: 4;
   color: #000000;
 }
 .page-footer__copyright:hover {
@@ -690,11 +708,42 @@ h3 {
 }
 .photos {
   text-align: center;
+}
+.photos__intro {
   padding-left: 20px;
   padding-right: 20px;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
-.photos__title {
-  margin: 40px 0;
+.photos__item {
+  padding: 20px;
+}
+.photo {
+  border-bottom: 1px solid #cccccc;
+}
+.photo:first-child {
+  border-top: 1px solid #cccccc;
+}
+.photo__img {
+  margin-bottom: 15px;
+  background: #eeeeee;
+}
+.photo__info {
+  text-align: left;
+}
+.photo__title {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.photo__autor {
+  margin-bottom: 8px;
+  text-transform: none;
+}
+.photo__like {
+  font-weight: 700;
+  line-height: 1.9;
+  padding-left: 35px;
+  background: url(../img/icon-like.svg) no-repeat;
 }
 .video {
   text-align: center;
@@ -702,13 +751,101 @@ h3 {
 .video__subtitle {
   padding-left: 20px;
   padding-right: 20px;
+  display: inline-block;
   text-align: center;
   font-size: 18px;
   line-height: 1.3;
   font-weight: 700;
+  margin: 35px 0;
 }
 .video__intro {
   padding-left: 20px;
   padding-right: 20px;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
-/*# sourceMappingURL=style.css.map */
+.video__item {
+  margin-bottom: 70px;
+}
+.form {
+  margin-bottom: 70px;
+}
+.form input[type="radio"],
+.form input[type="checkbox"] {
+  display: none;
+}
+.form__title {
+  margin: 35px 0;
+}
+.form__intro {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+.form__item {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 20px;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+}
+.form__item:first-child {
+  border-top: 1px solid #cccccc;
+}
+.form__item:last-of-type {
+  border-bottom: none;
+  margin-bottom: 30px;
+}
+.form__subtitle {
+  display: inline-block;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.form__label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.form__label--column {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.form__radio-btn,
+.form__checkbox {
+  padding: 14px 0 14px 70px;
+  margin-bottom: 10px;
+  text-transform: none;
+  font-weight: 700;
+  font-size: 16px;
+}
+.form__checkbox {
+  margin-bottom: 15px;
+}
+.form__inpute {
+  flex-grow: 1;
+  width: 180px;
+  margin-left: 10px;
+  padding: 15px;
+  background: #eeeeee;
+  font-size: 16px;
+  border: none;
+}
+.form__inpute--column {
+  width: 100%;
+  margin-top: 10px;
+  margin-left: 0;
+}
+.form__inpute::-webkit-input-placeholder,
+.form__inpute::-moz-input-placeholder {
+  font-weight: 700;
+  color: #000000;
+}
+.form__btn {
+  padding-left: 20px;
+  padding-right: 20px;
+}

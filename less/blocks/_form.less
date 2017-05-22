@@ -1,0 +1,95 @@
+.form {
+  margin-bottom: 70px;
+
+
+  input[type="radio"],  input[type="checkbox"]{
+    display: none;
+  }
+
+
+  &__title {
+    margin: 35px 0;
+  }
+
+
+  &__intro {
+    .padding();
+    text-align: center;
+  }
+
+  
+  &__item {
+    .column();
+    margin: 0;
+    padding: 20px;
+    border: none;
+    border-bottom: 1px solid @gray-light;
+
+    &:first-child {
+      border-top: 1px solid @gray-light;
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+      margin-bottom: 30px;
+    }
+  }
+
+
+  &__subtitle {
+    .title();
+    margin-bottom: 20px;
+  }
+
+
+  &__label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &--column {
+      .column();
+      align-items: stretch;
+    }
+  }
+
+  &__radio-btn, &__checkbox {
+    padding: 14px 0 14px 70px;
+    margin-bottom: 10px;
+    text-transform: none;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  &__checkbox {
+    margin-bottom: 15px;
+  }
+
+
+  &__inpute {
+    flex-grow: 1;
+    width: 180px;
+    margin-left: 10px;
+    padding: 15px;
+    background: @gray-lighter;
+    font-size: 16px;
+    border: none;
+
+
+    &--column {
+      width: 100%;
+      margin-top: 10px;
+      margin-left: 0;
+    }
+
+    &::-webkit-input-placeholder,  &::-moz-input-placeholder{
+      font-weight: 700;
+      color: #000000;
+    }
+  }
+
+
+  &__btn {
+    .padding();
+  }
+}

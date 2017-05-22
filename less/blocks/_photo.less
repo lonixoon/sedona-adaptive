@@ -1,3 +1,38 @@
 .photo {
   
+  border-bottom: 1px solid @gray-light;
+
+  &:first-child {
+    border-top: 1px solid @gray-light;
+  }
+
+  &__img {
+    margin-bottom: 15px;
+    background: @gray-lighter;
+  }
+
+
+  &__info {
+    text-align: left;
+  }
+
+
+  &__title {
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+
+  &__autor {
+    margin-bottom: 8px;
+    text-transform: none;
+  }
+
+
+  &__like {
+    font-weight: 700;
+    line-height: 1.9;
+    padding-left: 35px;
+    background: url(../img/icon-like.svg) no-repeat;
+  }
 }
