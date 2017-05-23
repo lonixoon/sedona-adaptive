@@ -37,6 +37,7 @@
     padding: 40px 0;
     .padding();
 
+
     &--bg-blue {
       color: #FFF;
       background-color: @blue-base;
@@ -90,6 +91,7 @@
       padding-bottom: 300px;
       background: @blue-base url(../img/index-hotel.jpg) no-repeat 50% 100%;
     }
+
   }
 
 
@@ -108,5 +110,45 @@
   &__subtitle {    
     font-size: 18px;
     font-weight: 700;
+  }
+}
+
+
+@media @mobile-width {
+  .advantages {
+    br {
+      display: none;
+    }
+  }  
+}
+
+
+@media @tabled-width {
+  .advantages {
+    &__title {
+    }
+
+
+    &__intro {
+
+      &::after {
+        display: none;
+      }
+    }
+
+
+    &__item {
+      &--bg-motel {
+        padding: 0;
+        // padding-right: 200px;
+        // background: @blue-base url(../img/index-hotel.jpg) no-repeat 50% 100%;
+        background-position: 255px ;
+      }
+    }
+
+    &__item-wrapper {
+      width: 255px;
+      padding: 40px;
+    }
   }
 }

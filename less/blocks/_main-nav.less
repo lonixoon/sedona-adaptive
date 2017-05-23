@@ -38,53 +38,11 @@
       }
     }
   }
-
-
-  &__user-items {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
-
-  &__login {
-    position: relative;
-    display: block;
-    padding: 12px 21px;
-    padding-left: 49px;
-    border-top: 1px solid @blue-light;
-    border-bottom: 1px solid @blue-dark;
-    font-size: 18px;
-    line-height: 1.4;
-    color: #ffffff;
-
-    &[href]:hover {
-      background: @blue-dark
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 20px;
-      margin-top: -8px;
-      width: 16px;
-      height: 16px;
-      background: url(../img/login.png) no-repeat;
-    }
-  }
 }
 
 
 @media @mobile-width {
   .main-nav {
-    
-    // &__item {
-    //   a {
-    //     padding-left: 21px;
-    //   }
-    // }
-
 
     &__toggle {
       position: absolute;
@@ -97,10 +55,6 @@
       cursor: pointer;
       background: @blue-darker;
       outline: none;
-    
-      &:hover {
-        // background: darken(@blue-base, 13%);
-      }
 
       &:active::before,
       &:active::after {
@@ -171,11 +125,6 @@
 
       .main-nav__wrapper {
         text-align: center;
-      //   margin-left: 70px;
-      //   position: absolute;
-      //   right: 0;
-      //   left: 0;
-      //   z-index: 20;
       }
     }
   }
@@ -184,28 +133,35 @@
 
 @media @tabled-width {
   .main-nav {
-    background: #000000;
+    background: #FFF;
+    color: #000;
+
 
     &__wrapper {
       display: flex;      
-      background: #000000;
+      background: #FFF;
     }
 
 
     &__items {
       display: flex;
-      flex-grow: 1;
-      font-weight: 400;
+      width: 100%;
+      font-size: 14px;
+      font-weight: 700;
+      box-shadow: none;
+
     }
 
 
     &__item {
-      flex-grow: 1;
+      width: 25%;
       text-align: center;
 
       a {
-        padding: 12px 15px;
+        padding: 18px 15px;
         border: none;
+        font-size: inherit;
+        color: inherit;
 
         &[href]:hover {
           color: @blue-base;
@@ -215,44 +171,23 @@
     }
 
 
-    &__user-items {
-
-      a {
-        border: none;
-
-        &[href]:hover {
-          color: @blue-base;
-          background: none;
-
-          &::before {
-            background: url(../img/login-hover.png) no-repeat;
-          }
-        }        
-      }
-    }
-
-
-    &__login {
-      min-height: 49px;
-      font-size: 0;
-    }
-
-
     &__toggle {
       display: none;
     }
 
+
     &--active {
+      color: @blue-black;
       position: relative;
 
       &::before {
         content: "";
         position: absolute;        
-        bottom: -2px;
+        top: 0;
         right: 0px;
         left: 0px;
-        height: 3px;
-        background: @blue-base;
+        height: 4px;
+        background: @blue-black;
       }
     }
   }
@@ -261,49 +196,6 @@
 
 @media @desktop-width {
   .main-nav {
-
-    &__item {
-      a {
-        padding: 12px 21px;
-      }
-    }
-
-
-    &__items {
-      margin-right: 10%;
-
-      
-    }
-
-
-    &__item {
-      a {
-        &[href]:hover {
-          color: #000000;
-          background: #FFFFFF;
-        }  
-      }
-    }
-
-
-    &__user-items {
-      a {
-        &[href]:hover {
-          color: #000000;
-          background: #FFFFFF;
-
-          &::before {
-            background: url(../img/login-black.png) no-repeat;
-          }
-        }        
-      }
-    }
-
-
-    &__login {
-      text-transform: uppercase;
-      font-size: 18px;
-    }
   }
 }
 

@@ -21,13 +21,10 @@
     </nav>
     <div class="page-header__wrapper">
       <div class="page-header__logo">
-        <picture>
-          <source srcset="img/logo-desktop.svg" media="(min-width: 1200px)">
-          <img src="img/logo.svg" alt="Седона">
-        </picture>
-        <div class="page-header__title">
-          <img src="img/title-index.svg" width="280" alt="Wellcome to Sedona">
-        </div>
+        <img src="img/logo.svg" alt="Седона">
+      </div>
+      <div class="page-header__title">
+        <img src="img/title-index.svg" width="280" alt="Wellcome to Sedona">
       </div>
     </div>
   </header>
@@ -35,15 +32,18 @@
     <h1 class="page__tiеle  visually-hidden">Добро пожаловать в Седону</h1>
     <section class="advantages">
       <div class="advantages__wrapper">
-        <h2 class="advantages__title">Седона – небольшой городок в Аризоне, заслуживающий большего!</h2>
+        <h2 class="advantages__title">Седона – небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
         <p class="advantages__intro">Рассмотрим 5 причин, по которым Седона круче Гранд Каньон!</p>
         <ul class="advantages__list">
 
-          <li class="advantages__item  advantages__item--bg-blue  advantages__item--corner  advantages__item--bg-motel">
-            <span class="advantages__subtitle">Настоящий городок</span>
-            <span class="advantages__number">– №1 –</span>
-            <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+          <li class="advantages__item  advantages__item--bg-blue  advantages__item--bg-motel  advantages__item--bg-motel-left">
+            <div class="advantages__item-wrapper">
+              <span class="advantages__subtitle">Настоящий городок</span>
+              <span class="advantages__number">– №1 –</span>
+              <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+            </div>
           </li>
+
           <ul class="advantages__nested-list">            
               <li class="advantages__item  advantages__item--inner  advantages__item--house">
                 <span class="advantages__subtitle">Жилье</span>
@@ -90,23 +90,27 @@
     </section>
     <section class="hotels">
       <h2 class="hotels__title">Заинтересовались?</h2>
-      <p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостинец в Седоне</p>
+      <p>Укажите предполагаемые даты поездки<br> и мы покажем вам лучшие предложения гостинец в Седоне</p>
       <button class="btn  btn--blue" href="form.html">Найти гостиницу</button>      
     </section>
   </main>
   <footer class="page-footer">
-    <picture>
-      <source srcset="img/index-map-desktop.jpg" media="(min-width: 1200px)">
-      <source srcset="img/index-map-tabled.jpg" media="(min-width: 768px) and (max-width: 1999px)">
-      <img src="img/index-map-mobile.jpg" alt="Карта">
-    </picture>
-    <p class="page-footer__hashtag">#visitsedona</p>
-    <p class="page-footer__social">
-      <a class="page-footer__link  page-footer__link--tw" href="#">twitter</a>
-      <a class="page-footer__link  page-footer__link--fb" href="#">faceboock</a>
-      <a class="page-footer__link  page-footer__link--inst" href="#">intagram</a>
-    </p>
-    <a href="#" class="page-footer__copyright">Разработано<span class="page-footer__link  page-footer__link--htmlac">htmlacademy</span></a>
+    <div class="page-footer__map-img">
+      <picture>
+        <source srcset="img/index-map-desktop.jpg" media="(min-width: 1200px)">
+        <source srcset="img/index-map-tabled.jpg" media="(min-width: 768px) and (max-width: 1999px)">
+        <img src="img/index-map-mobile.jpg" alt="Карта">
+      </picture>
+    </div>
+    <div class="page-footer__items">
+      <p class="page-footer__hashtag">#visitsedona</p>
+      <p class="page-footer__social">
+        <a class="page-footer__link  page-footer__link--tw" href="#">twitter</a>
+        <a class="page-footer__link  page-footer__link--fb" href="#">faceboock</a>
+        <a class="page-footer__link  page-footer__link--inst" href="#">intagram</a>
+      </p>
+      <a href="#" class="page-footer__copyright">Разработано<span class="page-footer__link  page-footer__link--htmlac">htmlacademy</span></a>
+    </div>
   </footer>
   <script src="js/popup.js"></script>
 </body>
