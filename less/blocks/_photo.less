@@ -1,5 +1,4 @@
-.photo {
-  
+.photo {  
   border-bottom: 1px solid @gray-light;
 
   &:first-child {
@@ -8,7 +7,7 @@
 
   &__img {
     margin-bottom: 15px;
-    background: @gray-lighter;
+    
   }
 
 
@@ -32,7 +31,52 @@
   &__like {
     font-weight: 700;
     line-height: 1.9;
-    padding-left: 35px;
+    padding-left: 30px;
     background: url(../img/icon-like.svg) no-repeat;
   }
+}
+
+
+@media @mobile-width {
+  .photo {
+    &__img {
+      background-color: @gray-lighter;
+    }
+  }
+}
+
+
+@media @tabled-width {
+  .photo {
+    border: none;
+
+    &:first-child {
+      border-top: none;
+    }
+
+
+    &__img {
+      margin-bottom: 0;
+    }
+
+
+    &__info {
+      position: relative;
+      padding: 15px;
+      // background: @gray-lighter;
+    }
+
+
+    &__autor {
+      margin-bottom: 0;
+    }
+
+
+    &__like {
+      position: absolute;
+      right: 40px;
+      top: 50%;
+      margin-top: -13px;
+    }
+  }  
 }

@@ -6,7 +6,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>Седона</title>
 </head>
-<body>
+<body class="container">
   <header class="page-header">
     <nav class="main-nav  main-nav--closed">
       <button type="button" class="main-nav__toggle">Открыть меню</button>
@@ -35,7 +35,7 @@
     <h1 class="page__title">Фото и видео</h1>
     <section class="photos">
       <h2 class="photos__title  visually-hidden">Фото</h2>
-      <p class="photos__intro">Не можете решиться на путешествие из-за курса? Фотографии помогут Вам забыть о политике и экономике.</p>
+      <p class="photos__intro">Не можете решиться на путешествие из-за курса?<br> Фотографии помогут Вам забыть о политике и экономике.</p>
       <div class="photos__items">
         <div class="photos__item  photo">
           <div class="photo__img">
@@ -52,12 +52,60 @@
             <div class="photo__like">1350</div>
           </div>
         </div>
+
+        <div class="photos__item  photos__item--small  photo">
+          <div class="photo__img">
+            <picture>
+              <source srcset="img/photo-2-desktop.jpg" media="(min-width: 1200px)">
+              <source srcset="img/photo-2-tablet.jpg" media="(min-width: 768px) and (max-width: 1999px)">
+              <source srcset="img/photo-2-mobile.jpg" media="(max-width: 767px)">
+              <img src="img/photo-2-mobile.jpg" alt="Народные просторы">
+            </picture>
+          </div>
+          <div class="photo__info">
+            <div class="photo__title">Народные просторы</div>
+            <div class="photo__autor">Автор фото: Борис</div>
+            <div class="photo__like">1350</div>
+          </div>
+        </div>
+
+        <div class="photos__item  photos__item--small  photo">
+          <div class="photo__img">
+            <picture>
+              <source srcset="img/photo-3-desktop.jpg" media="(min-width: 1200px)">
+              <source srcset="img/photo-3-tablet.jpg" media="(min-width: 768px) and (max-width: 1999px)">
+              <source srcset="img/photo-3-mobile.jpg" media="(max-width: 767px)">
+              <img src="img/photo-3-mobile.jpg" alt="Народные просторы">
+            </picture>
+          </div>
+          <div class="photo__info">
+            <div class="photo__title">Народные просторы</div>
+            <div class="photo__autor">Автор фото: Борис</div>
+            <div class="photo__like">1350</div>
+          </div>
+        </div>
+
+        <div class="photos__item  photos__item--small  photo">
+          <div class="photo__img">
+            <picture>
+              <source srcset="img/photo-4-desktop.jpg" media="(min-width: 1200px)">
+              <source srcset="img/photo-4-tablet.jpg" media="(min-width: 768px) and (max-width: 1999px)">
+              <source srcset="img/photo-4-mobile.jpg" media="(max-width: 767px)">
+              <img src="img/photo-4-mobile.jpg" alt="Народные просторы">
+            </picture>
+          </div>
+          <div class="photo__info">
+            <div class="photo__title">Народные просторы</div>
+            <div class="photo__autor">Автор фото: Борис</div>
+            <div class="photo__like">1350</div>
+          </div>
+        </div>
       </div>
     </section>
     <section class="video">
       <h2 class="video__title  visually-hidden">Видео</h2>
       <span class="video__subtitle">Все еще сомневаетесь?</span>
-        <p class="video__intro">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        <p class="video__intro">Смотрите видеопрезентацию и скорее за билетами, пока<br> они не подорожали в очередной раз!</p>
         <div class="video__item">
           <picture>
             <source srcset="img/video-desctop.jpg" media="(min-width: 1200px)">

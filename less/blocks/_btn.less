@@ -1,6 +1,7 @@
 .btn {
   display: inline-block;
   padding: 14px 20px;
+  margin: 0 auto;
   border: 1px solid #e5ddd5;
   font-family: inherit;
   text-align: center;
@@ -16,8 +17,12 @@
   }
 
 
-  &--width-100 {
+  &--width {
     width: 100%;
+    
+    @media @tabled-width {
+      width: 480px;
+    }
   }
 
 

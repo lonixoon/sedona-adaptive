@@ -53,16 +53,24 @@
     padding: 40px 0;
     margin-right: 55px;
     display: inline-block;
-    color: #000000;
+    
 
+    a {
+      color: #000000;
+
+      &:hover {
+        color: #000;
+        text-decoration: none;
+      }
+    }
+
+    
     &:hover {
-      color: #000;
-      text-decoration: none;
-
       .page-footer__link--htmlac {
         background-image: url(../img/logo-html-hover.svg);
       }
     }
+    
 
     &:active {
       .page-footer__link--htmlac {
@@ -79,7 +87,7 @@
 
     &__items {
       .row();
-      margin-bottom: 20px;
+      padding-bottom: 20px;
     }
 
 
@@ -103,8 +111,4 @@
       text-align: center;
     }
   }
-
-
-
-
 }

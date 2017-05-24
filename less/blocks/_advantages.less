@@ -38,10 +38,6 @@
     .padding();
 
 
-    &--bg-blue {
-      color: #FFF;
-      background-color: @blue-base;
-    }
     &--bg-gray {
       background-color: @gray-lighter;
     }
@@ -64,10 +60,6 @@
     &--inner {
       padding-top: 15px;
       padding-bottom: 15px;
-    }
-
-
-    &--house, &--food, &--souvenirs {
       padding-left: 70px;
       background: url(../img/icon-advantages.svg) no-repeat;
       background-size: 40px;
@@ -85,10 +77,14 @@
 
     &--bg-brige {
       padding-bottom: 300px;
+      color: #FFF;
+      background-color: @blue-base;
       background: @blue-base url(../img/index-brige.jpg) no-repeat 50% 100%;
     }
     &--bg-motel {
       padding-bottom: 300px;
+      color: #FFF;
+      background-color: @blue-base;
       background: @blue-base url(../img/index-hotel.jpg) no-repeat 50% 100%;
     }
 
@@ -107,9 +103,8 @@
   }
 
 
-  &__subtitle {    
-    font-size: 18px;
-    font-weight: 700;
+  &__subtitle {
+    .title();
   }
 }
 
@@ -125,7 +120,21 @@
 
 @media @tabled-width {
   .advantages {
+
+    &__wrapper {
+      &--item-bg-gray {
+        .row();
+      }
+    }
+    
+
     &__title {
+      font-size: 22px;
+    }
+
+
+    &__subtitle {
+      font-size: 21px;
     }
 
 
@@ -139,16 +148,58 @@
 
     &__item {
       &--bg-motel {
-        padding: 0;
-        // padding-right: 200px;
-        // background: @blue-base url(../img/index-hotel.jpg) no-repeat 50% 100%;
-        background-position: 255px ;
+        text-align: center;
+        padding: 33px 25px;
+        padding-right: 535px;        
+        background-image: url(../img/index-hotel-tabled.jpg);
+        background-position: 255px;
+      }
+
+
+      &--bg-brige {
+        text-align: center;
+        padding: 33px 25px;
+        padding-left: 535px;
+        background-image: url(../img/index-brige-tabled.jpg);
+        background-position: 0px;
+      }
+
+
+      &--inner {
+        width: 33.33%;
+        padding: 130px 30px 40px 30px;
+        text-align: center;
+        background-size: auto;
+      }
+
+
+      &--house {
+        background-position: 89px -315px;
+      }
+      &--food {
+        background-position: 89px 35px;
+      }
+      &--souvenirs {
+        background-position: 89px -950px;
+      }
+
+      &--bg-gray {;
+        width: 33.33%;
+        padding: 40px;
+      }
+      &--line-bottom {
+        & ::after {
+          display: none;
+        }
       }
     }
 
-    &__item-wrapper {
-      width: 255px;
-      padding: 40px;
+
+    
+
+
+    &__nested-list {
+      display: flex;
     }
   }
 }

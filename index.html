@@ -6,7 +6,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>Седона</title>
 </head>
-<body>
+<body class="container">
   <header class="page-header">
     <nav class="main-nav  main-nav--closed">
       <button type="button" class="main-nav__toggle">Открыть меню</button>
@@ -36,12 +36,10 @@
         <p class="advantages__intro">Рассмотрим 5 причин, по которым Седона круче Гранд Каньон!</p>
         <ul class="advantages__list">
 
-          <li class="advantages__item  advantages__item--bg-blue  advantages__item--bg-motel  advantages__item--bg-motel-left">
-            <div class="advantages__item-wrapper">
-              <span class="advantages__subtitle">Настоящий городок</span>
-              <span class="advantages__number">– №1 –</span>
-              <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
-            </div>
+          <li class="advantages__item  advantages__item--bg-motel">
+            <span class="advantages__subtitle">Настоящий городок</span>
+            <span class="advantages__number">– №1 –</span>
+            <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </li>
 
           <ul class="advantages__nested-list">            
@@ -51,47 +49,48 @@
               </li>
               
               <li class="advantages__item  advantages__item--inner  advantages__item--food">
-                <span class="advantages__subtitle">Сувениры</span>
-                <p class="advantages__description">Не только китайского, но и местного производства!</p>
-              </li>
-              
-              <li class="advantages__item  advantages__item--inner  advantages__item--souvenirs">
                 <span class="advantages__subtitle">Еда</span>
                 <p class="advantages__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-              </li>          
+              </li>
+
+              <li class="advantages__item  advantages__item--inner  advantages__item--souvenirs">
+                <span class="advantages__subtitle">Сувениры</span>
+                <p class="advantages__description">Не только китайского, но и местного производства!</p>
+              </li>   
             </ul>
           
 
-          <li class="advantages__item  advantages__item--bg-blue  advantages__item--bg-brige">
+          <li class="advantages__item  advantages__item--bg-brige">
             <span class="advantages__subtitle">Там есть Мост Дьявола</span>
             <span class="advantages__number">– №2 –</span>
             <p class="advantages__description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-          </li>
+          </li>          
+          <div class="advantages__wrapper--item-bg-gray">
+            <li class="advantages__item  advantages__item--bg-gray  advantages__item--line-bottom ">
+              <span class="advantages__subtitle">Небольшая площадь</span>
+              <span class="advantages__number">– №3 –</span>
+              <p class="advantages__description">Все красивые места находятся очень близко</p>
+            </li>
 
-          <li class="advantages__item  advantages__item--bg-gray  advantages__item--line-bottom ">
-            <span class="advantages__subtitle">Небольшая площадь</span>
-            <span class="advantages__number">– №3 –</span>
-            <p class="advantages__description">Все достопримечательности находятся очень близко</p>
-          </li>
+            <li class="advantages__item  advantages__item--bg-gray  advantages__item--line-bottom">
+              <span class="advantages__subtitle">Красивая дорога</span>
+              <span class="advantages__number">– №4 –</span>
+              <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </li>
 
-          <li class="advantages__item  advantages__item--bg-gray  advantages__item--line-bottom">
-            <span class="advantages__subtitle">Красивая дорога</span>
-            <span class="advantages__number">– №4 –</span>
-            <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-          </li>
-
-          <li class="advantages__item  advantages__item--bg-gray">
-            <span class="advantages__subtitle">Мало туристов</span>
-            <span class="advantages__number">– №5 –</span>
-            <p class="advantages__description">Большинство едет в Гранд Каньон и толпится там</p>
-          </li>
+            <li class="advantages__item  advantages__item--bg-gray">
+              <span class="advantages__subtitle">Мало туристов</span>
+              <span class="advantages__number">– №5 –</span>
+              <p class="advantages__description">Большинство едет в Гранд Каньон и толпится там</p>
+            </li>
+          </div>
         </ul>
       </div>
     </section>
     <section class="hotels">
       <h2 class="hotels__title">Заинтересовались?</h2>
-      <p>Укажите предполагаемые даты поездки<br> и мы покажем вам лучшие предложения гостинец в Седоне</p>
-      <button class="btn  btn--blue" href="form.html">Найти гостиницу</button>      
+      <p class="hotels__intro">Укажите предполагаемые даты поездки<br> и мы покажем вам лучшие предложения гостинец в Седоне</p>
+      <button class="btn  btn--blue  btn--width" href="form.html">Найти гостиницу</button>
     </section>
   </main>
   <footer class="page-footer">
@@ -103,13 +102,15 @@
       </picture>
     </div>
     <div class="page-footer__items">
-      <p class="page-footer__hashtag">#visitsedona</p>
-      <p class="page-footer__social">
+      <div class="page-footer__hashtag">#visitsedona</div>
+      <div class="page-footer__social">
         <a class="page-footer__link  page-footer__link--tw" href="#">twitter</a>
         <a class="page-footer__link  page-footer__link--fb" href="#">faceboock</a>
         <a class="page-footer__link  page-footer__link--inst" href="#">intagram</a>
-      </p>
-      <a href="#" class="page-footer__copyright">Разработано<span class="page-footer__link  page-footer__link--htmlac">htmlacademy</span></a>
+      </div>
+      <div class="page-footer__copyright">
+        <a href="#" >Разработано<span class="page-footer__link  page-footer__link--htmlac">htmlacademy</span></a>
+      </div
     </div>
   </footer>
   <script src="js/popup.js"></script>
