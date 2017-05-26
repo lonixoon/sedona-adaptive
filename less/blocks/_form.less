@@ -8,21 +8,19 @@
 
 
   &__title {
-    margin: 35px 0;
+    margin: 80px 0 35px 0;
   }
 
   
   &__subtitle {
     .title();
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 
     &--user-name {
-      // margin-bottom: 0;
     }
     
 
     &--checkbox {
-      // padding: 25px 0 0 0;
     }
   }
 
@@ -30,7 +28,7 @@
   &__intro {
     .padding();
     padding-bottom: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     text-align: center;
     border-bottom: 1px solid @gray-light;
   }
@@ -39,10 +37,9 @@
   &__item {
     .column();
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 20px;
-    padding-bottom: 5px;
-    border: none;
+    // border: none;
     border-bottom: 1px solid @gray-light;
 
 
@@ -50,7 +47,7 @@
     }
 
 
-    &:last-of-type {
+    &--textarea {
       border-bottom: none;
       margin-bottom: 30px;
     }
@@ -63,9 +60,9 @@
     margin-bottom: 20px;
 
 
-    &--column {
-      .column();
-      align-items: stretch;
+    &--contact {
+      padding-left: 15px;
+      margin-bottom: 5px;
     }
   }
 
@@ -80,9 +77,9 @@
   &__checkbox {
     margin-bottom: 15px;
   }
-  &__checkbox-wrapper {
-    .column();
-  }
+  // &__checkbox-wrapper {
+  //   .column();
+  // }
 
 
 
@@ -96,10 +93,10 @@
     border: none;
 
 
-    &--column {
+    &--contact {
       width: 100%;
-      // margin-top: 10px;
       margin-left: 0;
+      margin-bottom: 15px;
     }
 
     &::-webkit-input-placeholder {
@@ -115,10 +112,16 @@
 
   &__btn {
     .padding();
-    // width: 100%;
   }
 }
 
+
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+///////////////////////////////////////////////
 
 @media @mobile-width {
   .form {
@@ -128,6 +131,12 @@
   }
 }
 
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+///////////////////////////////////////////////
 
 @media @tabled-width {
   .form {
@@ -152,7 +161,6 @@
       }
 
       &--checkbox {
-        // margin-bottom: 40px;
         padding: 0 50px;
       }
 
@@ -163,7 +171,6 @@
       }
 
       &--user-contact {
-        // margin-bottom: 30px;
         padding: 0 50px;
       }
 
@@ -196,7 +203,6 @@
       &--user-name {
         order: 1;
         padding-left: 50px;
-
         width: 50%;        
         border-left: 1px solid @gray-light;
       }
@@ -231,11 +237,11 @@
     }
 
 
-    &__checkbox-wrapper {
-      .row();
-      flex-wrap: wrap;
-      padding: 0 100px;
-    }
+    // &__checkbox-wrapper {
+    //   .row();
+    //   flex-wrap: wrap;
+    //   padding: 0 100px;
+    // }
 
 
     &__radio-btn {
@@ -248,16 +254,15 @@
 
 
     &__label {
-      // margin-bottom: 20px;
-      
+
       &--margin-bottom {
         margin-bottom: 0;
-
       }
     }
 
     &__checkbox {
       margin-bottom: 25px;
+      
       &:nth-of-type(odd) {
         margin-right: 60px;
       }
@@ -267,8 +272,96 @@
       order: 5;
       padding-right: 0;
       padding-left: 0;
-      width: 50%;
+      width: 100%;
+    }
+  }
+}
 
+
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+
+
+
+@media @desktop-width {
+  .form {
+    padding: 0 120px;
+
+    &__subtitle {
+
+      &--radio {
+        text-align: center;
+      }
+
+
+      &--user-name {
+        // width: 100%;
+        text-align: center;
+      }
+
+
+      &--user-contact {
+        width: 100%
+      }
+
+
+      &--hidden {
+        display: inline;
+      }
+    }
+
+
+    &__item {
+
+      &--user-contact {
+        .row();
+        flex-wrap: wrap;     
+      }
+    }
+
+
+    &__label {
+
+      &--contact {
+        padding-left: 0;
+        padding-right: 15px;
+        margin-bottom: 10px;
+
+        &:first-child {
+          // margin-right: 30px;
+        }
+      }
+    }
+
+
+    &__inpute {
+      &--contact {
+        width: auto;
+        vertical-align: top;
+        margin-bottom: 10px;
+
+        &:first-of-type {
+          margin-right: 50px;
+        }
+      }
+    }
+
+
+    // &__checkbox-wrapper {
+    //   padding: 0;
+    //   justify-content: space-between;
+    // }
+
+
+    &__checkbox {
+
+      &:nth-of-type(odd) {
+        margin-right: 0;
+      }
     }
   }
 }

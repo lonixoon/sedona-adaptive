@@ -18,8 +18,6 @@
 @media @mobile-width {
   .photos {
 
-    
-      
     br {
       display: none;
     }
@@ -29,7 +27,6 @@
 
 @media @tabled-width {
   .photos {
-    
 
     &__items {
       .row();
@@ -48,6 +45,29 @@
         &:nth-child(odd) {
           background-color: darken(@gray-lighter, 3%);
         }
+      }
+    }
+  }
+}
+
+
+@media @desktop-width {
+  .photos {
+
+    &__intro {
+      margin-bottom: 60px;
+    }
+
+
+    &__items {
+      padding: 0px;
+    }
+
+
+    &__item {
+
+      &--small {
+        width: 33.33%;
       }
     }
   }
