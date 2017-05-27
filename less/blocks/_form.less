@@ -39,7 +39,6 @@
     margin: 0;
     margin-bottom: 10px;
     padding: 20px;
-    // border: none;
     border-bottom: 1px solid @gray-light;
 
 
@@ -60,9 +59,28 @@
     margin-bottom: 20px;
 
 
-    &--contact {
+    &--contact-tel, &--contact-email {
+      position: relative;
       padding-left: 15px;
       margin-bottom: 5px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 28px;
+        right: 0;
+        width: 48px;
+        height: 48px;
+        background: @gray-light url(../img/icon-input.svg) no-repeat 14px 14px;
+      }
+    }
+
+
+    &--contact-email {
+
+      &::after {
+        background-position:  -74px 14px;
+      }
     }
   }
 
@@ -77,9 +95,6 @@
   &__checkbox {
     margin-bottom: 15px;
   }
-  // &__checkbox-wrapper {
-  //   .column();
-  // }
 
 
 
@@ -97,13 +112,23 @@
       width: 100%;
       margin-left: 0;
       margin-bottom: 15px;
+      padding-right: 55px;     
     }
+
 
     &::-webkit-input-placeholder {
       font-weight: 700;
       color: #000000;
     }
-    &::-moz-input-placeholder {
+    &::-moz-placeholder {
+      font-weight: 700;
+      color: #000000;
+    }
+    &:-moz-placeholder {
+      font-weight: 700;
+      color: #000000;
+    }
+    &:-ms-input-placeholder {
       font-weight: 700;
       color: #000000;
     }
@@ -114,7 +139,6 @@
     .padding();
   }
 }
-
 
 ///////////////////////////////////////////////
 ///////////////////////////////////////////////
@@ -148,8 +172,11 @@
 
 
     &__subtitle {
+      position: relative;
       margin-bottom: 40px;
       font-size: 20px;
+      background-color: #fff;
+      z-index: 20;
 
       &--hidden {
         display: none;
@@ -212,7 +239,6 @@
         order: 2;
         margin-top: 20px;
         width: 100%;
-        border-top: 1px solid @gray-light;
       }
 
 
@@ -223,25 +249,48 @@
 
 
       &--checkbox {
+        .row();
         order: 3;
-        width: 100%;
-        border-top: 1px solid @gray-light;
+        width: 100%;        
+        flex-wrap: wrap;
       }
 
 
       &--textarea {
         order: 4;
         width: 100%;
-        border-top: 1px solid @gray-light;
       }
     }
 
 
-    // &__checkbox-wrapper {
-    //   .row();
-    //   flex-wrap: wrap;
-    //   padding: 0 100px;
-    // }
+    &__label {
+
+      &--contact-tel, &--contact-email {
+        
+        &::after {
+          width: 54px;
+          height: 54px;
+          background-position: 17px 17px;
+        }
+      }
+      &--contact-email {
+
+        &::after {
+          background-position:  -71px 17px;
+        }
+      }
+
+
+      &--margin-bottom {
+        margin-bottom: 0;
+      }
+    }
+
+
+    &__inpute {
+      padding: 18px 15px;
+      padding-right: 65px;
+    }
 
 
     &__radio-btn {
@@ -253,19 +302,9 @@
     }
 
 
-    &__label {
-
-      &--margin-bottom {
-        margin-bottom: 0;
-      }
-    }
-
     &__checkbox {
       margin-bottom: 25px;
-      
-      &:nth-of-type(odd) {
-        margin-right: 60px;
-      }
+      margin-left: 100px;
     }
 
     &__btn {
@@ -277,35 +316,29 @@
   }
 }
 
-
 ///////////////////////////////////////////////
 ///////////////////////////////////////////////
 ///////////////////////////////////////////////
 ///////////////////////////////////////////////
 ///////////////////////////////////////////////
 ///////////////////////////////////////////////
-
-
 
 @media @desktop-width {
   .form {
     padding: 0 120px;
 
     &__subtitle {
+      text-align: center;
 
       &--radio {
-        text-align: center;
       }
 
 
       &--user-name {
-        // width: 100%;
-        text-align: center;
       }
 
 
       &--user-contact {
-        width: 100%
       }
 
 
@@ -321,18 +354,24 @@
         .row();
         flex-wrap: wrap;     
       }
+
+
+      &--checkbox {
+        justify-content: space-between;
+      }
     }
 
 
     &__label {
 
-      &--contact {
+      &--contact-tel, &--contact-email {
         padding-left: 0;
         padding-right: 15px;
         margin-bottom: 10px;
 
-        &:first-child {
-          // margin-right: 30px;
+        &::after {
+          top: 0;
+          right: -275px;
         }
       }
     }
@@ -351,17 +390,8 @@
     }
 
 
-    // &__checkbox-wrapper {
-    //   padding: 0;
-    //   justify-content: space-between;
-    // }
-
-
     &__checkbox {
-
-      &:nth-of-type(odd) {
-        margin-right: 0;
-      }
+      margin-left: 0;
     }
   }
 }

@@ -33,6 +33,10 @@
     padding-left: 30px;
     background: url(../img/icon-like.svg) no-repeat;
     cursor: pointer;
+
+    &:hover {
+      background-image: url(../img/icon-like-hover.svg);
+    }
   }
 }
 
@@ -84,9 +88,13 @@
 @media @desktop-width {
   .photo {
     &__info {
-      margin-top: -81px;
+      margin-top: -82px;
       color: #FFF;
       background-color: rgba(0, 0, 0, 0.4);
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+      }
     }
 
 
