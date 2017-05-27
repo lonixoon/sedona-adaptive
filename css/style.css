@@ -1120,21 +1120,9 @@ input[type="radio"]:checked + .radio-btn::before {
           align-items: center;
   margin-bottom: 20px;
 }
-.form__label--contact-tel,
-.form__label--contact-email {
-  position: relative;
+.form__label--contact {
   padding-left: 15px;
   margin-bottom: 5px;
-}
-.form__label--contact-tel::after,
-.form__label--contact-email::after {
-  content: "";
-  position: absolute;
-  top: 28px;
-  right: 0;
-  width: 48px;
-  height: 48px;
-  background: #cccccc url(../img/icon-input.svg) no-repeat 14px 14px;
 }
 .form__label--contact-email::after {
   background-position: -74px 14px;
@@ -1166,6 +1154,16 @@ input[type="radio"]:checked + .radio-btn::before {
   margin-left: 0;
   margin-bottom: 15px;
   padding-right: 55px;
+}
+.form__inpute--phone {
+  background: url(../img/icon-input-1.svg) no-repeat 100% 14px, #eeeeee url(../img/gray-background.svg) no-repeat 100%;
+  background-size: auto,
+                        48px;
+}
+.form__inpute--mail {
+  background: url(../img/icon-input-1.svg) no-repeat 100% -67px, #eeeeee url(../img/gray-background.svg) no-repeat 100%;
+  background-size: auto,
+                        48px;
 }
 .form__inpute::-webkit-input-placeholder {
   font-weight: 700;
@@ -1292,21 +1290,22 @@ input[type="radio"]:checked + .radio-btn::before {
             order: 4;
     width: 100%;
   }
-  .form__label--contact-tel::after,
-  .form__label--contact-email::after {
-    width: 54px;
-    height: 54px;
-    background-position: 17px 17px;
-  }
-  .form__label--contact-email::after {
-    background-position: -71px 17px;
-  }
   .form__label--margin-bottom {
     margin-bottom: 0;
   }
   .form__inpute {
     padding: 18px 15px;
     padding-right: 65px;
+  }
+  .form__inpute--phone {
+    background: url(../img/icon-input-1.svg) no-repeat 100% 16px, #eeeeee url(../img/gray-background.svg) no-repeat 100%;
+    background-size: 36px,
+                         52px;
+  }
+  .form__inpute--mail {
+    background: url(../img/icon-input-1.svg) no-repeat 100% -74px, #eeeeee url(../img/gray-background.svg) no-repeat 100%;
+    background-size: 36px,
+                         52px;
   }
   .form__radio-btn {
     margin-bottom: 25px;
@@ -1353,16 +1352,10 @@ input[type="radio"]:checked + .radio-btn::before {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .form__label--contact-tel,
-  .form__label--contact-email {
+  .form__label--contact {
     padding-left: 0;
     padding-right: 15px;
     margin-bottom: 10px;
-  }
-  .form__label--contact-tel::after,
-  .form__label--contact-email::after {
-    top: 0;
-    right: -275px;
   }
   .form__inpute--contact {
     width: auto;

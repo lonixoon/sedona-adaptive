@@ -59,20 +59,20 @@
     margin-bottom: 20px;
 
 
-    &--contact-tel, &--contact-email {
-      position: relative;
+    &--contact {
+      // position: relative;
       padding-left: 15px;
       margin-bottom: 5px;
 
-      &::after {
-        content: "";
-        position: absolute;
-        top: 28px;
-        right: 0;
-        width: 48px;
-        height: 48px;
-        background: @gray-light url(../img/icon-input.svg) no-repeat 14px 14px;
-      }
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   top: 28px;
+      //   right: 0;
+      //   width: 48px;
+      //   height: 48px;
+      //   background: @gray-light url(../img/icon-input.svg) no-repeat 14px 14px;
+      // }
     }
 
 
@@ -112,7 +112,21 @@
       width: 100%;
       margin-left: 0;
       margin-bottom: 15px;
-      padding-right: 55px;     
+      padding-right: 55px; 
+    }
+
+
+    &--phone {
+      background: url(../img/icon-input-1.svg) no-repeat 100% 14px,
+                  @gray-lighter url(../img/gray-background.svg) no-repeat 100%;
+      background-size: auto,
+                        48px;
+    }
+    &--mail {
+      background: url(../img/icon-input-1.svg) no-repeat 100% -67px,
+                  @gray-lighter url(../img/gray-background.svg) no-repeat 100%;
+      background-size: auto,
+                        48px;
     }
 
 
@@ -265,20 +279,20 @@
 
     &__label {
 
-      &--contact-tel, &--contact-email {
+      // &--contact-tel, &--contact-email {
         
-        &::after {
-          width: 54px;
-          height: 54px;
-          background-position: 17px 17px;
-        }
-      }
-      &--contact-email {
+      //   &::after {
+      //     width: 54px;
+      //     height: 54px;
+      //     background-position: 17px 17px;
+      //   }
+      // }
+      // &--contact-email {
 
-        &::after {
-          background-position:  -71px 17px;
-        }
-      }
+      //   &::after {
+      //     background-position:  -71px 17px;
+      //   }
+      // }
 
 
       &--margin-bottom {
@@ -290,6 +304,19 @@
     &__inpute {
       padding: 18px 15px;
       padding-right: 65px;
+
+      &--phone {
+        background: url(../img/icon-input-1.svg) no-repeat 100% 16px,
+                    @gray-lighter url(../img/gray-background.svg) no-repeat 100%;
+        background-size: 36px,
+                         52px;
+      }
+      &--mail {
+        background: url(../img/icon-input-1.svg) no-repeat 100% -74px,
+                    @gray-lighter url(../img/gray-background.svg) no-repeat 100%;
+        background-size: 36px,
+                         52px;
+      }
     }
 
 
@@ -364,15 +391,15 @@
 
     &__label {
 
-      &--contact-tel, &--contact-email {
+      &--contact {
         padding-left: 0;
         padding-right: 15px;
         margin-bottom: 10px;
 
-        &::after {
-          top: 0;
-          right: -275px;
-        }
+        // &::after {
+        //   top: 0;
+        //   right: -275px;
+        // }
       }
     }
 
