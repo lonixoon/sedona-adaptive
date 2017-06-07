@@ -249,7 +249,7 @@ h3 {
   .container {
     width: 768px;
     margin: 0 auto;
-    box-sizing: content-box;
+    box-sizing: border-box;
     box-shadow: 0 0 40px -5px;
     border-left: 1px solid #BBB;
     border-right: 1px solid #BBB;
@@ -379,14 +379,14 @@ input[type="radio"]:checked + .radio-btn::before {
 .page-header::after {
   position: absolute;
   content: "";
-  bottom: 0px;
+  bottom: 0;
   width: 100%;
   height: 20px;
   background: url(../img/corner-white.svg) no-repeat;
   background-size: 100% 20px;
 }
 .page-header__wrapper {
-  background: url(../img/bg.jpg) no-repeat 50% 0px;
+  background: url(../img/bg.jpg) no-repeat 50% 0;
 }
 .page-header__wrapper--inner-page {
   background-position: 50% 70%;
@@ -402,7 +402,7 @@ input[type="radio"]:checked + .radio-btn::before {
   .page-header::after {
     position: absolute;
     content: "";
-    bottom: 0px;
+    bottom: 0;
     width: 100%;
     height: 40px;
     background: url(../img/corner-white.svg) no-repeat;
@@ -411,7 +411,7 @@ input[type="radio"]:checked + .radio-btn::before {
   .page-header::before {
     position: absolute;
     content: "";
-    bottom: 0px;
+    bottom: 0;
     left: 50%;
     margin-left: -350px;
     width: 700px;
@@ -566,8 +566,8 @@ input[type="radio"]:checked + .radio-btn::before {
     content: "";
     position: absolute;
     top: 0;
-    right: 0px;
-    left: 0px;
+    right: 0;
+    left: 0;
     height: 4px;
     background: #38759e;
   }
@@ -698,7 +698,7 @@ input[type="radio"]:checked + .radio-btn::before {
     padding: 40px 25px;
     padding-left: 535px;
     background-image: url(../img/index-brige-tabled.jpg);
-    background-position: 0px;
+    background-position: 0;
   }
   .advantages__item--inner {
     width: 33.33%;
@@ -737,7 +737,7 @@ input[type="radio"]:checked + .radio-btn::before {
     padding: 50px 60px;
     padding-left: 850px;
     background-image: url(../img/index-brige.jpg);
-    background-position: 0px;
+    background-position: 0;
   }
   .advantages__item--house {
     background-position: 161px -315px;
@@ -898,7 +898,7 @@ input[type="radio"]:checked + .radio-btn::before {
     margin-bottom: 60px;
   }
   .photos__items {
-    padding: 0px;
+    padding: 0;
   }
   .photos__item--small {
     width: 33.33%;

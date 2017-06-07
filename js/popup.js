@@ -15,7 +15,7 @@ menuToggle.addEventListener("click", function(event) {
   event.preventDefault();
   menuClosed.classList.toggle("main-nav--closed");
   menuClosed.classList.toggle("main-nav--opened");
-})
+});
 
 
 // loginFormOpened.addEventListener("click", function(event) {
