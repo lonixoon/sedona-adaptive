@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/styles.min.css">
+  <title>Седона</title>
+</head>
+<body class="container">
+  <header class="page-header">
+    <nav class="main-nav  main-nav--closed">
+      <button type="button" class="main-nav__toggle">Открыть меню</button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__items">
+          <li class="main-nav__item"><a href="index.html">Главная</a></li>
+          <li class="main-nav__item"><a href="photos.html">Фото и видео</a></li>
+          <li class="main-nav__item  main-nav--active"><a>Форма отзыва</a></li>
+          <li class="main-nav__item"><a href="#">HTML Academy</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="page-header__wrapper  page-header__wrapper--inner-page">
+      <div class="page-header__logo">
+        <img src="img/logo.svg" alt="Седона">
+      </div>
+      <div class="page-header__title  page-header__title--inner-page">
+        <img src="img/title-inner-page.svg" width="280" alt="Wellcome to Sedona">
+      </div>
+    </div>
+  </header>
+  <main class="page">
+    <section class="form">
+      <h1 class="form__title">Оставьте свой отзыв</h1>
+      <p class="form__intro">Помогите нашим отелям стать лучше! Оставьте отзыв о них,<br> а также о посещенных Вами местах.
+      </p>
+      <form class="form__items" name="feadback" method="post">
+        <div class="form__item  form__item--user-name">
+          <span class="form__subtitle  form__subtitle--user-name">Представьтесь<span class="form__subtitle--hidden"> пожалуйста</span>:</span>
+          
+          <label class="form__label">Имя:<input class="form__inpute  form__inpute--text" type="text" name="name" placeholder="Петр"></label>
+          <label class="form__label">Фамилия:<input class="form__inpute"  type="text" name="surname" placeholder="Иванов"></label>
+          <label class="form__label  form__label--margin-bottom">Отчество:<input class="form__inpute" type="text" name="patronymic" placeholder="Александрович"></label>
+        </div>
+        
+        <div class="form__item  form__item--user-contact">
+          <span class="title-line"><span class="form__subtitle  form__subtitle--user-contact">Контактная информация:</span></span>
+          
+          <label class="form__label  form__label--contact" for="tel">Контактный телефон:</label>
+          <input class="form__inpute  form__inpute--contact  form__inpute--phone" type="tel" name="tel" placeholder="Введите телефон" id="tel">
+          
+
+          <label class="form__label  form__label--contact" for="email">Электронная почта:</label>
+          <input class="form__inpute  form__inpute--contact  form__inpute--mail" type="email" name="email" placeholder="Введите e-mail" id="email">           
+        </div>
+        
+        <div class="form__item  form__item--radio">
+          <span class="form__subtitle  form__subtitle--radio">Ваше общее впечатление:</span>
+          <input type="radio" name="impression" id="radio1" checked>
+          <label class="form__radio-btn  radio-btn" for="radio1">Скорее положительное</label>
+
+          <input type="radio" name="impression" id="radio2">
+          <label class="form__radio-btn  radio-btn" for="radio2">Скорее отрицательное</label>
+
+          <input type="radio" name="impression" id="radio3">
+          <label class="form__radio-btn  form__radio-btn--margin-bottom  radio-btn" for="radio3">Затрудняюсь ответить</label>
+        </div>
+        
+        <div class="form__item  form__item--checkbox">
+          <span class="title-line"><span class="form__subtitle  form__subtitle--checkbox">Посещенные места:</span></span>
+
+          <input type="checkbox" name="brige" id="brige" checked>
+          <label class="form__checkbox checkbox" for="brige">Мост Дьявола</label>
+
+          <input type="checkbox" name="park" id="park" checked>
+          <label class="form__checkbox checkbox" for="park">Слайд-парк</label>
+
+          <input type="checkbox" name="slide" id="slide">
+          <label class="form__checkbox checkbox" for="slide">Горка-Колокол</label>
+
+          <input type="checkbox" name="cliffs" id="cliffs">
+          <label class="form__checkbox checkbox" for="cliffs">Красные скалы</label>
+        </div>
+        
+        <div class="form__item form__item--textarea">
+          <span class="title-line"><span class="form__subtitle  form__subtitle--textarea">Опишите свои эмоции:</span></span>
+          <textarea class="form__inpute  form__inpute--textarea" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
+        </div>
+        <div class="form__btn">
+          <button class="btn  btn--blue  btn--width" type="submit">Отправить отзыв</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__items">
+      <div class="page-footer__hashtag">#visitsedona</div>
+      <div class="page-footer__social">
+        <a class="page-footer__link  page-footer__link--tw" href="#">twitter</a>
+        <a class="page-footer__link  page-footer__link--fb" href="#">faceboock</a>
+        <a class="page-footer__link  page-footer__link--inst" href="#">instagram</a>
+      </div>
+      <div class="page-footer__copyright">
+        <a href="#" >Разработано<span class="page-footer__link  page-footer__link--htmlac">htmlacademy</span></a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/popup.js"></script>
+</body>
+</html>

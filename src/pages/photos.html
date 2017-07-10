@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/styles.min.css">
+  <title>Седона</title>
+</head>
+<body class="container">
+  <header class="page-header">
+    <nav class="main-nav  main-nav--closed">
+      <button type="button" class="main-nav__toggle">Открыть меню</button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__items">
+          <li class="main-nav__item"><a href="index.html">Главная</a></li>
+          <li class="main-nav__item  main-nav--active"><a>Фото и видео</a></li>
+          <li class="main-nav__item"><a href="form.html">Форма отзыва</a></li>
+          <li class="main-nav__item"><a href="#">HTML Academy</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="page-header__wrapper  page-header__wrapper--inner-page">
+      <div class="page-header__logo">
+        <img src="img/logo.svg" alt="Седона">
+      </div>
+      <div class="page-header__title  page-header__title--inner-page">
+        <img src="img/title-inner-page.svg" width="280" alt="Wellcome to Sedona">
+      </div>
+    </div>
+  </header>
+  <main class="page">
+    <h1 class="page__title">Фото и видео</h1>
+    <section class="photos">
+      <h2 class="photos__title  visually-hidden">Фото</h2>
+      <p class="photos__intro">Не можете решиться на путешествие из-за курса?<br> Фотографии помогут Вам забыть о политике и экономике.</p>
+      <div class="photos__items">
+        <div class="photos__item  photo">
+          <div class="photo__img">
+            <picture>
+              <source srcset="img/photo-1-desktop.jpg" media="(min-width: 1200px)">
+              <source srcset="img/photo-1-tablet.jpg" media="(min-width: 768px) and (max-width: 1999px)">
+              <source srcset="img/photo-1-mobile.jpg" media="(max-width: 767px)">
+              <img src="img/photo-1-desktop.jpg" alt="Народные просторы">
+            </picture>
+          </div>
+          <div class="photo__info">
+            <div class="photo__title">Народные просторы</div>
+            <div class="photo__autor">Автор фото: Борис</div>
+            <div class="photo__like">1350</div>
+          </div>
+        </div>
+
+        <div class="photos__item  photos__item--small  photo">
+          <div class="photo__img">
+            <picture>
+              <source srcset="img/photo-2-desktop.jpg" media="(min-width: 1200px)">
+              <source srcset="img/photo-2-tablet.jpg" media="(min-width: 768px) and (max-width: 1999px)">
+              <source srcset="img/photo-2-mobile.jpg" media="(max-width: 767px)">
+              <img src="img/photo-2-desktop.jpg" alt="Народные просторы">
+            </picture>
+          </div>
+          <div class="photo__info">
+            <div class="photo__title">Местная растительность</div>
+            <div class="photo__autor">Автор фото: Петр</div>
+            <div class="photo__like">96</div>
+          </div>
+        </div>
+
+        <div class="photos__item  photos__item--small  photo">
+          <div class="photo__img">
+            <picture>
+              <source srcset="img/photo-3-desktop.jpg" media="(min-width: 1200px)">
+              <source srcset="img/photo-3-tablet.jpg" media="(min-width: 768px) and (max-width: 1999px)">
+              <source srcset="img/photo-3-mobile.jpg" media="(max-width: 767px)">
+              <img src="img/photo-3-desktop.jpg" alt="Народные просторы">
+            </picture>
+          </div>
+          <div class="photo__info">
+            <div class="photo__title">Дорога на север</div>
+            <div class="photo__autor">Автор фото: Сергей</div>
+            <div class="photo__like">254</div>
+          </div>
+        </div>
+
+        <div class="photos__item  photos__item--small  photo">
+          <div class="photo__img">
+            <picture>
+              <source srcset="img/photo-4-desktop.jpg" media="(min-width: 1200px)">
+              <source srcset="img/photo-4-tablet.jpg" media="(min-width: 768px) and (max-width: 1999px)">
+              <source srcset="img/photo-4-mobile.jpg" media="(max-width: 767px)">
+              <img src="img/photo-4-desktop.jpg" alt="Народные просторы">
+            </picture>
+          </div>
+          <div class="photo__info">
+            <div class="photo__title">Мост дьявола</div>
+            <div class="photo__autor">Автор фото: Антон</div>
+            <div class="photo__like">143</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="video">
+      <h2 class="video__title  visually-hidden">Видео</h2>
+      <span class="video__subtitle">Все еще сомневаетесь?</span>
+        <p class="video__intro">Смотрите видеопрезентацию и скорее за билетами, пока<br> они не подорожали в очередной раз!</p>
+        <div class="video__item">
+          <picture>
+            <source srcset="img/video-desctop.jpg" media="(min-width: 1200px)">
+            <source srcset="img/video-tabled.jpg" media="(min-width: 768px) and (max-width: 1999px)">
+            <source srcset="img/video-mobile.jpg" media="(max-width: 767px)">
+            <img src="img/video-desctop.jpg" alt="Видеопрезентация">
+          </picture>
+        </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__items">
+      <div class="page-footer__hashtag">#visitsedona</div>
+      <div class="page-footer__social">
+        <a class="page-footer__link  page-footer__link--tw" href="#">twitter</a>
+        <a class="page-footer__link  page-footer__link--fb" href="#">faceboock</a>
+        <a class="page-footer__link  page-footer__link--inst" href="#">instagram</a>
+      </div>
+      <div class="page-footer__copyright">
+        <a href="#" >Разработано<span class="page-footer__link  page-footer__link--htmlac">htmlacademy</span></a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.min.js"></script>
+</body>
+</html>
